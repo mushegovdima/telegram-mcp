@@ -1,10 +1,12 @@
 # telegram-mcp
 
-MCP server that bridges Telegram Bot API to AI clients (Claude Desktop, etc.).
+**Send Telegram messages from Claude with one command.**
 
-**Supported OS:** macOS
+MCP server that connects Claude Desktop to Telegram Bot API — so Claude can message you, fetch updates, and look up chats without leaving the conversation.
 
-> Linux / Windows: the MCP server binary works on any platform, but `install.sh` is macOS-only. Configure Claude Desktop manually (see below).
+![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?logo=go&logoColor=white) ![License](https://img.shields.io/github/license/mushegovdima/telegram-mcp) ![macOS](https://img.shields.io/badge/macOS-installer-black?logo=apple)
+
+**Supported OS:** macOS (installer) · Linux / Windows (manual setup)
 
 ## Quick start
 
@@ -56,6 +58,8 @@ go build -o telegram-mcp ./cmd/server/
 ```
 
 4. The Telegram tools will appear in the tool list.
+
+> **Linux / Windows:** the binary works on any platform, but `install.sh` is macOS-only. Add the server to `claude_desktop_config.json` manually and set `TELEGRAM_BOT_TOKEN` / `TELEGRAM_DEFAULT_CHAT_ID` env vars.
 
 ### Sending a message
 
