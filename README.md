@@ -60,12 +60,7 @@ go build -o telegram-mcp ./cmd/server/
 ### Sending a message
 
 Ask Claude:
-> Send "Hello from Claude!" to chat_id `-100123456789`
+> Send "Hello!" to my Telegram
 
-Claude will call `send_message` with the provided `chat_id` and `text`.
+No need to specify a chat ID — `send_message` uses your user ID saved during install by default.
 
-## Environment variables
-
-| Variable | Required | Description |
-|---|---|---|
-| `TELEGRAM_BOT_TOKEN` | yes | Bot token from @BotFather |
